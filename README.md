@@ -52,7 +52,21 @@ Then add the link to qtpie.js and the script to init.
 <script type="text/javascript" src="assets/js/qtpie.js"></script>
 <script>
 $(function(){
-	qtpie.init('#svgPie');
+	qtpie.init();
+})
+</script>
+```
+
+Default settings targets the id 'qtpie' and display the word 'Skills' in the center. You can change these parameters like this :
+
+```html
+<script type="text/javascript" src="assets/js/qtpie.js"></script>
+<script>
+$(function(){
+	qtpie.init({
+		id         : '#customId',
+		defaultMsg : 'custom message'
+	});
 })
 </script>
 ```
