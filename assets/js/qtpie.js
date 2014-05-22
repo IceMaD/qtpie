@@ -1,12 +1,23 @@
 $(function() {	
+	
 // Developed by IceMaD : marcduboc.fr
 // Thanks to Anders Grimsrud for the base : http://codepen.io/agrimsrud/pen/EmCoa
+
 	qtpie = {
-		init : function(id) {
+		init : function(options) {
+
+			var defaultOptions = {
+				id         : '#qtpie',
+				defaultMsg : 'Skills'
+			}
+
+			options = $.extend({}, defaultOptions, options);
+
 			base = 0;
-			$paths = $(id).find('path');
+			$paths = $(options.id).find('path');
 			$paths.each(function(index, el) {
-				deg = 3.6*$(this).attr('data-pie');
+				deg = 3.61*$(this).attr('data-pie');
+				// 3.61 instead of 3.6 to fix little svg render bug
 				qtpie.draw({
 					slice  : $(this),
 					degree : deg,
@@ -14,15 +25,24 @@ $(function() {
 				});
 				base += parseInt(deg);
 			});
-			$(id).find('circle').css('fill',$('body').css('background-color'));
-			$paths.click(function(event) {
+
+			$(options.id).append('<div class="qtpieInside">'+options.defaultMsg+'</div>').find('circle').css('fill',$('body').css('background-color'));
+
+			$paths.hover(function(event) {
 				$(this)
 					.parent().parent()
-					.find('.inside')
+					.find('.qtpieInside')
 					.css('color',$(this).css('fill'))
-					.html($(this).attr('data-desc')+'<br>'+$(this).attr('data-pie')+'%');
+					.html($(this).attr('data-desc'));
+			},function(){
+				$(this)
+					.parent().parent()
+					.find('.qtpieInside')
+					.removeAttr('style')
+					.html(options.defaultMsg)
 			});
-			$(id).show();
+
+			$(options.id).show();
 		},
 		draw : function(options) {
 			var defaultOptions = {
