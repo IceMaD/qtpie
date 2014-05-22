@@ -71,7 +71,7 @@ $(function(){
 	qtpie.init({
 		id         : '#customId',
 		defaultMsg : 'custom message',
-		radius     : 80
+		radius     : 80 // note that with 0, you have a pie chart
 	});
 })
 </script>
