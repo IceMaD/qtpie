@@ -4,6 +4,8 @@
 
 SVG pie chart automatically generated via javascript.
 
+Please note that Jquery is required
+
 #### How to use
 
 Create a div with an id and a svg in it with these parameters
@@ -45,7 +47,6 @@ Then add them in the svg, before the circle. With some classes for the color, it
 </div>
 ```
 Then add the link to qtpie.js and the script to init.
-Please note that Jquery is required
 
 ```html
 <script type="text/javascript" src="assets/js/qtpie.js"></script>
@@ -56,4 +57,4 @@ $(function(){
 </script>
 ```
 
-See a demon on http://codepen.io/IceMaD/pen/iKGEq
+See a demo on http://codepen.io/IceMaD/pen/iKGEq
