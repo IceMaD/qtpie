@@ -8,7 +8,8 @@ $(function() {
 
 			var defaultOptions = {
 				id         : '#qtpie',
-				defaultMsg : 'Skills'
+				defaultMsg : 'Skills',
+				radius     : 70
 			}
 
 			options = $.extend({}, defaultOptions, options);
@@ -25,6 +26,8 @@ $(function() {
 				});
 				base += parseInt(deg);
 			});
+
+			$(options.id).find('circle').attr('r',options.radius);
 
 			$(options.id).append('<div class="qtpieInside">'+options.defaultMsg+'</div>').find('circle').css('fill',$('body').css('background-color'));
 
