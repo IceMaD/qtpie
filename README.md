@@ -2,7 +2,7 @@
 
 ### Description
 
-SVG donuts chart generated via javascript.
+SVG donut chart generated via javascript.
 
 Please note that Jquery is required
 
