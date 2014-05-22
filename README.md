@@ -2,7 +2,7 @@
 
 #### Description
 
-SVG pie chart automatically generated via javascript.
+SVG pie chart generated via javascript.
 
 Please note that Jquery is required
 
