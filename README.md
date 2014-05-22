@@ -44,9 +44,11 @@ Then add them in the svg, before the circle. With some classes for the color, it
 	</svg>
 </div>
 ```
-Then add the script to init. Note that Jquery is required
+Then add the link to qtpie.js and the script to init.
+Please note that Jquery is required
 
-```
+```html
+<script type="text/javascript" src="assets/js/qtpie.js"></script>
 <script>
 $(function(){
 	qtpie.init('#svgPie');
