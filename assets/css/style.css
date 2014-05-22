@@ -1,12 +1,6 @@
 /* INIT
 --------------------------------------------------------------------------- */
 
-* {
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-			box-sizing: border-box;
-}
-
 body {
 	background: #191919;
 	text-align: center;
@@ -27,33 +21,31 @@ path:hover {
 	fill: #fff;
 }
 
-.inside {
+.qtpieInside {
 	border-radius: 100%;
 	position: absolute;
-	top: 15%;	
 	left: 15%;
 	width: 70%;
-	height: 70%;
 	top: 50%;
-	margin-top: calc(-55px + 2vw);
-	font-size: calc(30px - 1vw);
-	line-height: 2;
+	margin-top: -15px;
+	font-size: 30px;
+	line-height: 30px;
 	overflow: hidden;
 	text-align: center;
-	color: #fff;
+	color: #ecf0f1;
 }
 
-#svgPie, #svgPie_2, #svgPie_3 {
+#qtpie {
 	position: relative;
 	display: block;
 	display: none;
-	margin: 50px auto;/*
-	min-width: 200px;
-	min-height: 200px;*/
-	width: calc(300px - 5vw);
-	height: calc(300px - 5vw);
-	/*width: 20vw;*/
-	/*height: 20vw;*/
+	margin: 50px auto;
+	min-width: 250px;
+	width: 250px;
+	width: 20vw;
+	min-height: 250px;
+	height: 250px;
+	height: 20vw;
 }
 
 /* COLORS
@@ -68,11 +60,11 @@ path:hover {
 }
 
 .Illustrator {
-	fill: #d35400;
+	fill: #f39c12;
 }
 
 .Illustrator:hover {
-	fill: #e67e22;
+	fill: #f1c40f;
 }
 
 .InDesign {
