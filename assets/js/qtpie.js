@@ -32,17 +32,26 @@ $(function() {
 			$(options.id).append('<div class="qtpieInside">'+options.defaultMsg+'</div>').find('circle').css('fill',$('body').css('background-color'));
 
 			$paths.hover(function(event) {
-				$(this)
-					.parent().parent()
-					.find('.qtpieInside')
-					.css('color',$(this).css('fill'))
-					.html($(this).attr('data-desc'));
+				$current = $(this);
+				$inside  = $current.parent().parent().find('.qtpieInside')
+
+				$inside.stop().fadeOut(200, function() {
+					$inside
+						.css('color',$current.css('fill'))
+						.html($current.attr('data-desc'))
+						.fadeIn(200);
+				});
 			},function(){
+				$current = $(this);
+				$inside  = $current.parent().parent().find('.qtpieInside')
+
+				$inside.stop().fadeOut(200, function() {
+					$inside
+						.removeAttr('style')
+						.html(options.defaultMsg)
+						.fadeIn(200);
+				});
 				$(this)
-					.parent().parent()
-					.find('.qtpieInside')
-					.removeAttr('style')
-					.html(options.defaultMsg)
 			});
 
 			$(options.id).show();
