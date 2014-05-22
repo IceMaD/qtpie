@@ -76,4 +76,4 @@ $(function(){
 </script>
 ```
 
-See a demo on http://codepen.io/IceMaD/pen/iKGEq
+See a demo on [Codepen](http://codepen.io/IceMaD/pen/iKGEq)
