@@ -30,7 +30,7 @@ For each slice you want, create a path with the attribute data-pie to determine 
 <path data-pie="28" data-desc="Photoshop"/>
 ```
 
-Then add them in the svg, before the circle.
+Then add them in the svg, before the circle. With some classes for the color, it will look like this :
 
 ```html
 <div id="svgPie">
