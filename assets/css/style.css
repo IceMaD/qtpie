@@ -1,0 +1,113 @@
+/* INIT
+--------------------------------------------------------------------------- */
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+body {
+	background: #191919;
+	text-align: center;
+}
+
+svg {
+	height: 100%;
+	width: 100%;
+}
+
+path {
+	fill: #111;
+	cursor: pointer;
+	opacity: 1;
+}
+
+path:hover {
+	fill: #fff;
+}
+
+.inside {
+	border-radius: 100%;
+	position: absolute;
+	top: 15%;	
+	left: 15%;
+	width: 70%;
+	height: 70%;
+	top: 50%;
+	margin-top: calc(-55px + 2vw);
+	font-size: calc(30px - 1vw);
+	line-height: 2;
+	overflow: hidden;
+	text-align: center;
+	color: #fff;
+}
+
+#svgPie, #svgPie_2, #svgPie_3 {
+	position: relative;
+	display: block;
+	display: none;
+	margin: 50px auto;/*
+	min-width: 200px;
+	min-height: 200px;*/
+	width: calc(300px - 5vw);
+	height: calc(300px - 5vw);
+	/*width: 20vw;*/
+	/*height: 20vw;*/
+}
+
+/* COLORS
+--------------------------------------------------------------------------- */
+
+.Photoshop {
+	fill: #2980b9;
+}
+
+.Photoshop:hover {
+	fill: #3498db;
+}
+
+.Illustrator {
+	fill: #d35400;
+}
+
+.Illustrator:hover {
+	fill: #e67e22;
+}
+
+.InDesign {
+	fill: #8e44ad;
+}
+
+.InDesign:hover {
+	fill: #9b59b6;
+}
+
+.HTML5 {
+	fill: #c0392b;
+}
+
+.HTML5:hover {
+	fill: #e74c3c;
+}
+
+.CSS3 {
+	fill: #27ae60;
+}
+
+.CSS3:hover {
+	fill: #2ecc71;
+}
+
+/* LIST
+--------------------------------------------------------------------------- */
+
+#demo {
+	display: inline-block;
+	margin-top: 10vw;
+}
+
+#demo li {
+	float: left;
+	margin: 0 2vw;
+}
