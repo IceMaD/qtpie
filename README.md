@@ -1,12 +1,14 @@
 # qtpie.js
 
-#### Description
+### Description
 
 SVG pie chart generated via javascript.
 
 Please note that Jquery is required
 
-#### How to use
+### How to use
+
+##### HTML
 
 Create a div with an id and a svg in it with these parameters
 
@@ -46,7 +48,10 @@ Then add them in the svg, before the circle. With some classes for the color, it
 	</svg>
 </div>
 ```
-Then add the link to qtpie.js and the script to init.
+
+##### Javascript
+
+Add the link to qtpie.js and the script to init.
 
 ```html
 <script type="text/javascript" src="assets/js/qtpie.js"></script>
