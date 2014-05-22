@@ -2,7 +2,7 @@
 
 ### Description
 
-SVG pie chart generated via javascript.
+SVG donut chart generated via javascript.
 
 Please note that Jquery is required
 
@@ -62,7 +62,7 @@ $(function(){
 </script>
 ```
 
-Default settings targets the id 'qtpie' and display the word 'Skills' in the center. You can change these parameters like this :
+Default settings targets the id 'qtpie' and a center of 70% that display the word 'Skills'. You can change these parameters like this :
 
 ```html
 <script type="text/javascript" src="assets/js/qtpie.js"></script>
@@ -70,7 +70,8 @@ Default settings targets the id 'qtpie' and display the word 'Skills' in the cen
 $(function(){
 	qtpie.init({
 		id         : '#customId',
-		defaultMsg : 'custom message'
+		defaultMsg : 'custom message',
+		radius     : 80 // note that with 0, you have a pie chart
 	});
 })
 </script>
