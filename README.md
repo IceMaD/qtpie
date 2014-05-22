@@ -1,5 +1,5 @@
-qtpie
-=====
+qtpie.js
+========
 
 SVG pie chart automatically generated via javascript.
 
