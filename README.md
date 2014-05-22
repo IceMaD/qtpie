@@ -2,7 +2,7 @@
 
 ### Description
 
-SVG pie chart generated via javascript.
+SVG donuts chart generated via javascript.
 
 Please note that Jquery is required
 
