@@ -19,12 +19,12 @@ Create a div with an id and a svg in it with these parameters
 	</svg>
 </div>
 ```
-Add a circle inside the svg. The r value is the percentage of void inside the donut.
+Add a circle inside the svg.
 
 ```html
 <div id="svgPie">
 	<svg viewbox="0 0 200 200">
-		<circle r="70" transform="translate(100, 100)">
+		<circle transform="translate(100, 100)">
 	</svg>
 </div>
 ```
@@ -44,7 +44,7 @@ Then add them in the svg, before the circle. With some classes for the color, it
 		<path class="InDesign" data-pie="15" data-desc="InDesign"/>
 		<path class="HTML5" data-pie="22" data-desc="HTML5"/>
 		<path class="CSS3" data-pie="28" data-desc="CSS3"/>
-		<circle r="70" transform="translate(100, 100)">
+		<circle transform="translate(100, 100)">
 	</svg>
 </div>
 ```
