@@ -4,20 +4,23 @@
 	<meta charset="utf-8" />
 	<title>qtpie</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/reset.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
 	<div id="qtpie">
-		<svg viewbox="0 0 200 200">
-			<path class="Photoshop" data-pie="28" data-desc="Photoshop"/>
-			<path class="Illustrator" data-pie="7" data-desc="Illustrator"/>
-			<path class="InDesign" data-pie="15" data-desc="InDesign"/>
-			<path class="HTML5" data-pie="22" data-desc="HTML5"/>
-			<path class="CSS3" data-pie="28" data-desc="CSS3"/>
-			<circle transform="translate(100, 100)">
-		</svg>
+		<div>
+			<svg viewbox="0 0 200 200">
+				<path class="Photoshop" data-pie="28" data-desc="Photoshop"/>
+				<path class="Illustrator" data-pie="7" data-desc="Illustrator"/>
+				<path class="InDesign" data-pie="15" data-desc="InDesign"/>
+				<path class="HTML5" data-pie="22" data-desc="HTML5"/>
+				<path class="CSS3" data-pie="28" data-desc="CSS3"/>
+				<circle transform="translate(100, 100)">
+			</svg>
+		</div>
 	</div>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -25,8 +28,13 @@
 
 <script>
 $(function(){
-	qtpie.init();
-})
+	qtpie.init({
+		id         : '#qtpie',
+		defaultMsg : 'Skills',
+		radius     : 70,
+		list       : false,
+		hover      : true});
+	})
 </script>
 
 </body>

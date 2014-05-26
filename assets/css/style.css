@@ -6,21 +6,6 @@ body {
 	text-align: center;
 }
 
-svg {
-	height: 100%;
-	width: 100%;
-}
-
-path {
-	fill: #111;
-	cursor: pointer;
-	opacity: 1;
-}
-
-path:hover {
-	fill: #fff;
-}
-
 .qtpieInside {
 	border-radius: 100%;
 	position: absolute;
@@ -36,70 +21,116 @@ path:hover {
 }
 
 #qtpie {
-	position: relative;
-	display: block;
-	display: none;
 	margin: 50px auto;
-	min-width: 250px;
-	width: 250px;
-	width: 20vw;
-	min-height: 250px;
+	position: relative;
+	display: none;
+	display: inline-block;
+	min-width: 450px;
+	width: 450px;
+	width: 30vw;
+	max-height-height: 250px;
 	height: 250px;
 	height: 20vw;
+}
+
+#qtpie>div {
+	float: left;
+	position: relative;
+	height: 100%;
+}
+
+#qtpie svg {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+
+#qtpie path {
+	fill: #111;
+	cursor: pointer;
+	opacity: 1;
+}
+
+#qtpie path:hover {
+	fill: #fff;
+}
+
+#qtpie path:after {
+	content: 'a';
+	background: #191919;
+	height: 10px;
+	width: 10px;
+	display: block;
 }
 
 /* COLORS
 --------------------------------------------------------------------------- */
 
-.Photoshop {
+#qtpie .Photoshop {
 	fill: #2980b9;
+	background-color: #2980b9;
 }
 
-.Photoshop:hover {
+#qtpie .Photoshop:hover {
 	fill: #3498db;
+	background-color: #3498db;
 }
 
-.Illustrator {
+#qtpie .Illustrator {
 	fill: #f39c12;
+	background-color: #f39c12;
 }
 
-.Illustrator:hover {
+#qtpie .Illustrator:hover {
 	fill: #f1c40f;
+	background-color: #f1c40f;
 }
 
-.InDesign {
+#qtpie .InDesign {
 	fill: #8e44ad;
+	background-color: #8e44ad;
 }
 
-.InDesign:hover {
+#qtpie .InDesign:hover {
 	fill: #9b59b6;
+	background-color: #9b59b6;
 }
 
-.HTML5 {
+#qtpie .HTML5 {
 	fill: #c0392b;
+	background-color: #c0392b;
 }
 
-.HTML5:hover {
+#qtpie .HTML5:hover {
 	fill: #e74c3c;
+	background-color: #e74c3c;
 }
 
-.CSS3 {
+#qtpie .CSS3 {
 	fill: #27ae60;
+	background-color: #27ae60;
 }
 
-.CSS3:hover {
+#qtpie .CSS3:hover {
 	fill: #2ecc71;
+	background-color: #2ecc71;
 }
 
 /* LIST
 --------------------------------------------------------------------------- */
 
-#demo {
-	display: inline-block;
-	margin-top: 10vw;
+#qtpie ul {
+	margin: 30px 0 0 30px;
+	font-size: 20px;
+	float: left;
+	color: #eee;
+	text-align: left;
+	line-height: 1.5;
 }
 
-#demo li {
-	float: left;
-	margin: 0 2vw;
+span.dot {
+	display: inline-block;
+	width: 20px;
+	height: 5px;
+	margin-right: 10px;
 }

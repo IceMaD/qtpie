@@ -1,19 +1,25 @@
 $(function() {	
 	
-// Developed by IceMaD : marcduboc.fr
+// Developed by IceMaD (marcduboc.fr)
+// Demo : http://codepen.io/IceMaD/pen/iKGEq
+// GitHub: https://github.com/MarcDuboc/qtpie
+
 // Thanks to Anders Grimsrud for the base : http://codepen.io/agrimsrud/pen/EmCoa
 
 	qtpie = {
+
 		init : function(options) {
 
 			var defaultOptions = {
 				id         : '#qtpie',
 				defaultMsg : 'Skills',
-				radius     : 70
+				radius     : 70,
+				list       : false,
+				hover      : true
 			}
-
 			options = $.extend({}, defaultOptions, options);
 
+// Draw paths
 			base = 0;
 			$paths = $(options.id).find('path');
 			$paths.each(function(index, el) {
@@ -27,45 +33,57 @@ $(function() {
 				base += parseInt(deg);
 			});
 
+// Inside
 			$(options.id).find('circle').attr('r',options.radius);
+			$(options.id).find('div').append('<div class="qtpieInside">'+options.defaultMsg+'</div>').find('circle').css('fill',$('body').css('background-color'));
 
-			$(options.id).append('<div class="qtpieInside">'+options.defaultMsg+'</div>').find('circle').css('fill',$('body').css('background-color'));
+// Hover events
+			if (options.hover) {
+				$paths.hover(function(event) {
+					$current = $(this);
+					$inside  = $current.parent().parent().find('.qtpieInside')
 
-			$paths.hover(function(event) {
-				$current = $(this);
-				$inside  = $current.parent().parent().find('.qtpieInside')
+					$inside.stop().fadeOut(200, function() {
+						$inside
+							.css('color',$current.css('fill'))
+							.html($current.attr('data-desc'))
+							.fadeIn(200);
+					});
+				},function(){
+					$current = $(this);
+					$inside  = $current.parent().parent().find('.qtpieInside')
 
-				$inside.stop().fadeOut(200, function() {
-					$inside
-						.css('color',$current.css('fill'))
-						.html($current.attr('data-desc'))
-						.fadeIn(200);
+					$inside.stop().fadeOut(200, function() {
+						$inside
+							.removeAttr('style')
+							.html(options.defaultMsg)
+							.fadeIn(200);
+					});
+					$(this)
 				});
-			},function(){
-				$current = $(this);
-				$inside  = $current.parent().parent().find('.qtpieInside')
+			};
 
-				$inside.stop().fadeOut(200, function() {
-					$inside
-						.removeAttr('style')
-						.html(options.defaultMsg)
-						.fadeIn(200);
+// List generation (bootstrap style)
+			if (options.list) {
+				var list = '';
+				$paths.each(function(index, el) {
+					list += '<li><span class="dot" style="background-color:'+$(this).css('fill')+';"></span>'+$(this).attr('data-desc')+'</li>';
 				});
-				$(this)
-			});
+				$(options.id).append('<ul>'+list+'</ul>');
+			};
 
+// Display at the dn
 			$(options.id).show();
 		},
+
 		draw : function(options) {
+
 			var defaultOptions = {
 					slice  : null,
 					degree : 0,
 					base   : 0
 				};
-
 			options = $.extend({}, defaultOptions, options);
-
-			options.degree++;
 
 			var rayon = ( options.degree * Math.PI / 180),
 				x     = Math.sin( rayon ) * 100,
