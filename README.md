@@ -10,22 +10,26 @@ Please note that Jquery is required
 
 ##### HTML
 
-Create a div with an id and a svg in it with these parameters
+Create a div in a div with an id and a svg in it with these parameters
 
 ```html
 <div id="svgPie">
-	<svg viewbox="0 0 200 200">
+	<div>
+		<svg viewbox="0 0 200 200">
 
-	</svg>
+		</svg>
+	</div>
 </div>
 ```
 Add a circle inside the svg.
 
 ```html
 <div id="svgPie">
-	<svg viewbox="0 0 200 200">
-		<circle transform="translate(100, 100)">
-	</svg>
+	<div>
+		<svg viewbox="0 0 200 200">
+			<circle transform="translate(100, 100)">
+		</svg>
+	</div>
 </div>
 ```
 For each slice you want, create a path with the attribute data-pie to determine the percentage and the attribute data-desc for th text inside.
@@ -38,14 +42,16 @@ Then add them in the svg, before the circle. With some classes for the color, it
 
 ```html
 <div id="svgPie">
-	<svg viewbox="0 0 200 200">
-		<path class="Photoshop" data-pie="28" data-desc="Photoshop"/>
-		<path class="Illustrator" data-pie="7" data-desc="Illustrator"/>
-		<path class="InDesign" data-pie="15" data-desc="InDesign"/>
-		<path class="HTML5" data-pie="22" data-desc="HTML5"/>
-		<path class="CSS3" data-pie="28" data-desc="CSS3"/>
-		<circle transform="translate(100, 100)">
-	</svg>
+	<div>
+		<svg viewbox="0 0 200 200">
+			<path class="Photoshop" data-pie="28" data-desc="Photoshop"/>
+			<path class="Illustrator" data-pie="7" data-desc="Illustrator"/>
+			<path class="InDesign" data-pie="15" data-desc="InDesign"/>
+			<path class="HTML5" data-pie="22" data-desc="HTML5"/>
+			<path class="CSS3" data-pie="28" data-desc="CSS3"/>
+			<circle transform="translate(100, 100)">
+		</svg>
+	</div>
 </div>
 ```
 
