@@ -62,16 +62,23 @@ $(function(){
 </script>
 ```
 
-Default settings targets the id 'qtpie' and a center of 70% that display the word 'Skills'. You can change these parameters like this :
+Available parameters are:
+- the target id
+- the radius of the center (in percent)
+- the default word in the middle.
+- generation of a list
+- activation of hover effect
 
 ```html
 <script type="text/javascript" src="assets/js/qtpie.js"></script>
 <script>
 $(function(){
 	qtpie.init({
-		id         : '#customId',
-		defaultMsg : 'custom message',
-		radius     : 80 // note that with 0, you have a pie chart
+		id         : '#customId', // Default : '#qtpie'
+		defaultMsg : 'custom message', // Default : 'Skills'
+		radius     : 80, // Default : 70 // note that with 0, you have a pie chart
+		list       : true, // Default : 'false'
+		hover      : true // Default : 'true'
 	});
 })
 </script>
